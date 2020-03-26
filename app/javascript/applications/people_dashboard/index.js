@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import PeopleTable from './PeopleTable';
+import PeopleTable from './components/PeopleTable';
+import PeopleFrecuency from './components/PeopleFrecuency';
 
 const PeopleDashboard = () => {
   const [people, setPeople] = useState([]);
@@ -18,12 +19,13 @@ const PeopleDashboard = () => {
 
   return (
     <div className="container">
-      <div class="card">
-        <div class="card-header">
+      <div className="card">
+        <div className="card-header">
           People List
         </div>
-        <div class="card-body">
+        <div className="card-body">
           <PeopleTable people={people} />
+          <PeopleFrecuency people={people} />
         </div>
       </div>
     </div>
