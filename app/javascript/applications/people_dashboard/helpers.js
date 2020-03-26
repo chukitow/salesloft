@@ -8,6 +8,23 @@ export const peopleCountCharacter = (people) =>
     groupByCharacters(people)
   );
 
+export const peopleDuplicates = (people) =>
+  people
+    .reduce((acc, val) => {
+      const [username, domain] = val.email_address.split('@');
+      const matches = people.filter(
+        person =>
+          person.email_address.includes(username) &&
+          person.email_address.includes(domain)
+      );
+      
+      if(matches.length > 1) {
+        acc.push(val.email_address);
+      }
+
+      return acc;
+    }, []);
+
 const groupByCharacters = (people) =>
   people
     .reduce((acc, val) => {
