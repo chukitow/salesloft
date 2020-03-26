@@ -1,6 +1,6 @@
-# Salesloft
+# SalesLoft
 
-This is a small application that uses Salesloft API
+This is a small application that uses SalesLoft API
 
 ### Requirements
 - ruby 2.6.6
@@ -12,6 +12,10 @@ This is a small application that uses Salesloft API
 ```
 bundle install
 yarn install
+
+cp .env.example .env
+
+# Set your own API_KEY in .env
 ```
 
 ### Development
