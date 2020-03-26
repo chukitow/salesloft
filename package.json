@@ -18,7 +18,13 @@
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
+  "scripts": {
+    "test": "NODE_ENV=test mocha-webpack --webpack-config ./config/webpack/test.js app/javascript/**/*.spec.js --recursive"
+  },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1",
+    "mocha-webpack": "^2.0.0-beta.0",
     "webpack-dev-server": "^3.10.3"
   }
 }
