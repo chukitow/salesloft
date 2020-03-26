@@ -1,24 +1,31 @@
-# README
+# Salesloft
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a small application that uses Salesloft API
 
-Things you may want to cover:
+### Requirements
+- ruby 2.6.6
+- rails 6.0.2
+- node >= v10.0.0
 
-* Ruby version
+### Installation
 
-* System dependencies
+```
+bundle install
+yarn install
+```
 
-* Configuration
+### Development
 
-* Database creation
+```
+rails s
+```
 
-* Database initialization
+### System tests
+```
+rails test:system
+```
+### Frontend tests
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+yarn test
+```
